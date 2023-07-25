@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to first VUE3 project"/>
   <FirstProject/>
+
 </template>
 
 <script>
@@ -12,7 +13,7 @@ export default {
   name: 'App',
   components: {
     HelloWorld,
-    FirstProject
+    FirstProject,
   }
 }
 </script>
