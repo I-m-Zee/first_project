@@ -11,6 +11,7 @@ export default {
         return {
             email: "abc@gmail.com",
             mobile: "9562256",
+            display: false,
         }
     },
     methods: {
@@ -28,26 +29,32 @@ export default {
         },
         callConsole() {
             console.error("Hey There You are!")
+        },
+        showChild() {
+            this.display = !this.display
         }
     }
 }
 </script>
 <template>
-    <h1>Email: {{email}}</h1>
-    <h1>Number:  {{ mobile=9663 }}</h1>
+    <div v-if="display">
+        <TwoWay />
+    </div>
+    <h1>Email: {{ email }}</h1>
+    <h1>Number: {{ mobile=9663 }}</h1>
     <h1>Name: {{ getName("My Name") }}</h1>
     <h1>Name: {{ getName("Your Name") }}</h1>
     <h1>Name: {{ getName("Your Name") }}</h1>
-    <h1>Data Email:  {{ getData().email }}</h1>
-    <h1>Data Number:  {{ getData().mobile }}</h1>
+    <h1>Data Email: {{ getData().email }}</h1>
+    <h1>Data Number: {{ getData().mobile }}</h1>
     <!-- Frist way to capture events -->
     <button @click="click()">Click Here</button>
     <!-- <h1 @mousemove="callConsole()">Home Page</h1> -->
     <!-- Second way to capture events -->
     <!-- <button v-on:click="click()">Click Here</button>
-    <h1 v-on:mousemove="callConsole()">Home Page</h1> -->
+        <h1 v-on:mousemove="callConsole()">Home Page</h1> -->
     <hr>
-    <TwoWay/>
+    <button type="button" @click="showChild()">Toggle Child Component</button>
 </template>
 
 <style scoped>
