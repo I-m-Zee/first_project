@@ -2,6 +2,10 @@
     <h1>Email: {{email}}</h1>
     <h1>Number:  {{ mobile=9663 }}</h1>
     <h1>Name: {{ getName("My Name") }}</h1>
+    <h1>Name: {{ getName("Your Name") }}</h1>
+    <h1>Name: {{ getName("Your Name") }}</h1>
+    <h1>Data Email:  {{ getData().email }}</h1>
+    <h1>Data Number:  {{ getData().mobile }}</h1>
 </template>
 <script>
 // Working in Same Compoenent
@@ -11,8 +15,16 @@ export default {
         return {
             email: "abc@gmail.com",
             mobile: "9562256",
-            getName: function (param) {
-                return param
+        }
+    },
+    methods: {
+        getName (param) {
+            return param
+        },
+        getData() {
+             return {
+                email: "abc@gmail.com",
+                mobile: "9562256",
             }
         }
     }
