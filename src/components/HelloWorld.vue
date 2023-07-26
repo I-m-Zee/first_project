@@ -2,12 +2,12 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
   </div>
-  <div v-for="tech in techStack" :key="tech">
+  <!-- <div v-for="tech in techStack" :key="tech">
     {{ tech }}
   </div>
   <div v-for="tech in techStacks" :key="tech">
     {{ tech.lang }} | {{ tech.type }}
-  </div>
+  </div> -->
 </template>
 
 <script>

@@ -21,8 +21,8 @@ export default {
 }
 </script>
 <template>
-    <h3>From Parnet: {{ test }}</h3>
-    <button type="button" @click="getData">Click Me</button>
+     <h3>From Parnet: {{ test }}</h3>
+   <!-- <button type="button" @click="getData">Click Me</button>
     <button type="button" @click="onClickButton()">Click Parent for Child</button>
     <h1>Multiple Two Way Binding</h1>
     <label for="sport" class="sport">Select Sports</label>
@@ -69,7 +69,7 @@ export default {
     </div>
     <div v-for="tech in techStacks" :key="tech">
         {{ tech.lang }} | {{ tech.type }}
-    </div>
+    </div> -->
 </template>
 <style>
 .sport {

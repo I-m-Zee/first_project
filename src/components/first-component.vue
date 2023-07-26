@@ -40,13 +40,13 @@ export default {
     <div v-if="display">
         <TwoWay />
     </div>
-    <h1>Email: {{ email }}</h1>
+    <!-- <h1>Email: {{ email }}</h1>
     <h1>Number: {{ mobile=9663 }}</h1>
     <h1>Name: {{ getName("My Name") }}</h1>
     <h1>Name: {{ getName("Your Name") }}</h1>
     <h1>Name: {{ getName("Your Name") }}</h1>
     <h1>Data Email: {{ getData().email }}</h1>
-    <h1>Data Number: {{ getData().mobile }}</h1>
+    <h1>Data Number: {{ getData().mobile }}</h1> -->
     <!-- Frist way to capture events -->
     <button @click="click()">Click Here</button>
     <!-- <h1 @mousemove="callConsole()">Home Page</h1> -->
@@ -55,6 +55,10 @@ export default {
         <h1 v-on:mousemove="callConsole()">Home Page</h1> -->
     <hr>
     <button type="button" @click="showChild()">Toggle Child Component</button>
+    <!-- Rendering Tag as HTML -->
+    <h1 v-html="email"></h1>
+    <h3 v-html="mobile"></h3>
+    <h5 v-html="email"></h5>
 </template>
 
 <style scoped>
