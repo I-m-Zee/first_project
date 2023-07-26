@@ -32,10 +32,11 @@ export default {
 </script>
 <template>
     <h1>Two Way Binding</h1>
-    <input type="text" name="twoWay" id="twoWay" placeholder="Write Number here" v-model="count">
-    <h2>{{ count }}</h2>
+    <!-- <input type="text" name="twoWay" id="twoWay" placeholder="Write Number here" v-model="count">
+    <h2>{{ count }}</h2> -->
     <hr>
-    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" :techStack="techStack" :techStacks="techStacks" @clicked="onClickButton($event)"/>
+    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" :techStack="techStack" :techStacks="techStacks"
+        @clicked="onClickButton($event)" />
 </template>
 <style scoped>
 h1 {
