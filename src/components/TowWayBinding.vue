@@ -23,6 +23,9 @@ export default {
     methods: {
         pasData() {
             alert('Function from Parent')
+        },
+        onClickButton(event) {
+            alert(event)
         }
     }
 }
@@ -32,7 +35,7 @@ export default {
     <input type="text" name="twoWay" id="twoWay" placeholder="Write Number here" v-model="count">
     <h2>{{ count }}</h2>
     <hr>
-    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" :techStack="techStack" :techStacks="techStacks" />
+    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" :techStack="techStack" :techStacks="techStacks" @clicked="onClickButton($event)"/>
 </template>
 <style scoped>
 h1 {

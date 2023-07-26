@@ -12,12 +12,18 @@ export default {
         getData: Function,
         techStack: Object,
         techStacks: Object
+    },
+     methods: {
+        onClickButton() {
+            this.$emit('clicked', 'someValue')
+        }
     }
 }
 </script>
 <template>
     <h3>From Parnet: {{ test }}</h3>
     <button type="button" @click="getData">Click Me</button>
+    <button type="button" @click="onClickButton()">Click Parent for Child</button>
     <h1>Multiple Two Way Binding</h1>
     <label for="sport" class="sport">Select Sports</label>
     <br>
