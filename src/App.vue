@@ -2,18 +2,21 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to first VUE3 project"/>
   <FirstProject/>
+  <exampleForm/>
 
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import FirstProject from './components/first-component.vue'
+import exampleForm from './components/example-form.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     FirstProject,
+    exampleForm
   }
 }
 </script>
