@@ -9,7 +9,9 @@ export default {
     },
     props: {
         test: String,
-        getData:Function
+        getData: Function,
+        techStack: Object,
+        techStacks: Object
     }
 }
 </script>
@@ -55,6 +57,12 @@ export default {
     <div>
         <h2>Selected Sports are: {{ selectedSports }}</h2>
         <h2>Selected Player is: {{ selectedPlayer }}</h2>
+    </div>
+    <div v-for="tech in techStack" :key="tech">
+        {{ tech }}
+    </div>
+    <div v-for="tech in techStacks" :key="tech">
+        {{ tech.lang }} | {{ tech.type }}
     </div>
 </template>
 <style>

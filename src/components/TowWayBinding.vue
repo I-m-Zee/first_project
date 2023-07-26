@@ -8,6 +8,16 @@ export default {
     data() {
         return {
             count: 5895,
+            techStack: ['Java', 'PHP', 'Python', 'C-Sharp', 'Angular', 'React', 'Vue'],
+            techStacks: [
+                { type: 'Backend', lang: 'Java' },
+                { type: 'Backend', lang: 'PHP' },
+                { type: 'Backend', lang: 'Python' },
+                { type: 'Backend', lang: 'C-Sharp' },
+                { type: 'Frontend', lang: 'Angular' },
+                { type: 'Frontend', lang: 'Vue' },
+                { type: 'Frontend', lang: 'React' }
+            ]
         }
     },
     methods: {
@@ -22,7 +32,7 @@ export default {
     <input type="text" name="twoWay" id="twoWay" placeholder="Write Number here" v-model="count">
     <h2>{{ count }}</h2>
     <hr>
-    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" />
+    <MultipleTwoWayBinding test="Parent Called" :getData="pasData" :techStack="techStack" :techStacks="techStacks" />
 </template>
 <style scoped>
 h1 {
