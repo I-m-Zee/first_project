@@ -28,6 +28,12 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul> -->
   </div>
+  <div v-for="tech in techStack" :key="tech">
+    {{ tech }}
+  </div>
+  <div v-for="tech in techStacks" :key="tech">
+    {{ tech.lang }} | {{ tech.type }}
+  </div>
 </template>
 
 <script>
@@ -35,6 +41,20 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      techStack: ['Java', 'PHP', 'Python', 'C-Sharp', 'Angular', 'React', 'Vue'],
+      techStacks: [
+        { type: 'Backend', lang: 'Java' },
+        { type: 'Backend', lang: 'PHP' },
+        { type: 'Backend', lang: 'Python' },
+        { type: 'Backend', lang: 'C-Sharp' },
+        { type: 'Frontend', lang: 'Angular' },
+        { type: 'Frontend', lang: 'Vue' },
+        { type: 'Frontend', lang: 'React' }
+      ]
+    }
   }
 }
 </script>
@@ -44,14 +64,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
