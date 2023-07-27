@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h1>{{ getIncome }}</h1>
   </div>
   <!-- <div v-for="tech in techStack" :key="tech">
     {{ tech }}
@@ -27,7 +28,14 @@ export default {
         { type: 'Frontend', lang: 'Angular' },
         { type: 'Frontend', lang: 'Vue' },
         { type: 'Frontend', lang: 'React' }
-      ]
+      ],
+      balance: 100,
+      expense: 200,
+    }
+  },
+  computed: {
+    getIncome() {
+      return  this.balance + this.expense
     }
   }
 }
