@@ -3,6 +3,12 @@
     <h1>{{ msg }}</h1>
     <h1>{{ getIncome }}</h1>
   </div>
+  <div>
+    <h1>{{ count }}</h1>
+    <button type="button" @click="count++">+</button>
+    &nbsp;
+    <button type="button" @click="count--">-</button>
+  </div>
   <!-- <div v-for="tech in techStack" :key="tech">
     {{ tech }}
   </div>
@@ -31,13 +37,30 @@ export default {
       ],
       balance: 100,
       expense: 200,
+      count: 0
     }
   },
   computed: {
     getIncome() {
-      return  this.balance + this.expense
+      return this.balance + this.expense
     }
+  },
+  created() {
+    this.$watch('count', (num, last) => {
+      if (num > 10) {
+        console.log(num, last)
+        alert("Max Limit")
+      }
+    })
   }
+  // watch: {
+  //   count(num, last) {
+  //     if (num > 10) {
+  //       console.log(num, last)
+  //       alert("Max Limit")
+  //     }
+  //   }
+  // }
 }
 </script>
 
