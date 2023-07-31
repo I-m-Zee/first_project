@@ -1,7 +1,10 @@
 <template>
     <h1>Parent Component</h1>
-    <childSlot>
-        <template #header>
+    <h3>VUE Life Cycle Methods</h3>
+    <h6 ref="add">{{ count }}</h6>
+    <button type="button" @click="count++; displayChild = !displayChild">Update</button>
+    <childSlot v-if="displayChild">
+        <!-- <template #header>
             <h1>Header Part</h1>
         </template>
         <template #section>
@@ -12,7 +15,7 @@
         </template>
         <template #footer>
             <h1>Footer Part</h1>
-        </template>
+        </template> -->
     </childSlot>
 </template>
 
@@ -24,13 +27,39 @@ export default {
         childSlot
     },
     data() {
+        // console.log("Component Created")
         return {
+            count: 0,
+            displayChild: false
         }
     },
     computed: {
     },
-    created() {
-    }
+    // VUE Life Cycle Hooks
+    // beforeCreate() {
+    //     alert('Before Created!')
+    // },
+    // created() {
+    //     alert('Created')
+    // },
+    // beforeMount() {
+    //     console.log('This is beforeMounted', this.$el)
+    // },
+    // mounted() {
+    //     console.log('This is Mounted', this.$el)
+    // },
+    // beforeUpdate() {
+    //     console.log("Before Update: ", this.$refs['add'].textContent)
+    // },
+    // updated() {
+    //      console.log("Update: ", this.$refs['add'].textContent)
+    // },
+    // beforeUnmount() {
+    //     console.log('Before Unmount', this.$.refs['child'])
+    // },
+    // unmounted() {
+    //     console.log('Unmount', this.$.refs['child'])
+    // }
 }
 </script>
 

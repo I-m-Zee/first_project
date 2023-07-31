@@ -1,5 +1,5 @@
 <template>
-    <h1>Child Slot</h1>
+    <h1 ref="child">Child Slot</h1>
     <div>
         <slot name="header"></slot>
     </div>
@@ -25,7 +25,20 @@ export default {
         }
     },
     created() {
-    }
+    },
+    // VUE Life Cycle Hooks
+    //  beforeMount() {
+    //     console.log('This is beforeMounted',  this.$.refs['child'])
+    // },
+    // mounted() {
+    //     console.log('This is Mounted',  this.$.refs['child'])
+    // },
+    // beforeUnmount() {
+    //     console.log('Before Unmount', this.$.refs['child'])
+    // },
+    // unmounted() {
+    //     console.log('Unmount', this.$.refs['child'])
+    // }
 }
 </script>
 
