@@ -1,14 +1,14 @@
 <template>
-  <div class="hello">
+  <!-- <div class="hello"> -->
     <h1>{{ msg }}</h1>
-    <h1>{{ getIncome }}</h1>
+    <!-- <h1>{{ getIncome }}</h1>
   </div>
   <div>
     <h1>{{ count }}</h1>
     <button type="button" @click="count++">+</button>
     &nbsp;
     <button type="button" @click="count--">-</button>
-  </div>
+  </div> -->
   <!-- <div v-for="tech in techStack" :key="tech">
     {{ tech }}
   </div>

@@ -3,14 +3,16 @@
   <HelloWorld msg="Welcome to first VUE3 project" />
   <!-- <FirstProject/>
   <exampleForm/> -->
-  <DefineProps />
+  <!-- <DefineProps /> -->
+  <parentComponent />
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 // import FirstProject from './components/first-component.vue'
 // import exampleForm from './components/example-form.vue';
-import DefineProps from './components/props.vue'
+// import DefineProps from './components/props.vue'
+import parentComponent from './components/parent.vue'
 
 export default {
   name: 'App',
@@ -18,7 +20,8 @@ export default {
     HelloWorld,
     // FirstProject,
     // exampleForm
-    DefineProps
+    // DefineProps,
+    parentComponent
 
   }
 }
