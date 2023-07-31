@@ -4,7 +4,14 @@
   <!-- <FirstProject/>
   <exampleForm/> -->
   <!-- <DefineProps /> -->
-  <parentComponent />
+  <parentComponent /><br>
+  <RouterLink to="/">Home</RouterLink>
+  <br>
+  <RouterLink to="/login/zeeshan">Login</RouterLink>
+  <br>
+  <RouterLink to="/signup/someone">Sign-Up</RouterLink>
+  <br>
+  <RouterView></RouterView>
 </template>
 
 <script>
