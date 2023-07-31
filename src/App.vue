@@ -12,6 +12,7 @@
   <RouterLink to="/signup/someone">Sign-Up</RouterLink>
   <br>
   <RouterView></RouterView>
+  
 </template>
 
 <script>

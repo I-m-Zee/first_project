@@ -1,9 +1,9 @@
 <template>
-<h1>{{login }} has Logged in</h1>
+    <h1>{{ login }} has Logged in</h1>
 </template>
 
 <script>
-import {useRoute} from 'vue-router';
+import { useRoute } from 'vue-router';
 export default {
     name: 'login-com',
     data() {
@@ -13,7 +13,8 @@ export default {
     },
     mounted() {
         const route = useRoute()
-        this.login = route.param['m']
+        console.table('Name',route.params['m'])
+        this.login = route.params['m']
     },
 }
 </script>
