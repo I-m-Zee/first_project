@@ -26,7 +26,7 @@ const routes = [
   },
 ];
 
-const router = createRouter({
+const router = createfRouter({
   history: createWebHistory(),
   routes,
 });
